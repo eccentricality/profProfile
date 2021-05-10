@@ -1,0 +1,147 @@
+/* selection of color scheme for my own style choice, rc for rich and colorful */
+:root {
+    --rcSalmon: #F78888;
+    --rcDandy: #F3D250;
+    --rcOffWhite: #ECECEC;
+    --rcBlue: #5DA2D5;
+    --rcBlueLight: #90CCF4;
+}
+
+/* applying general style choice to body container to apply across the body as baseline since this specificity is one of the most general and can easily be overwritten by other more specific designations */
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Rubik', sans-serif; /* from google fonts */
+}
+
+/* creating a nice border for the header, giving it a bit of padding so text isn't too close to the edges */
+.header {
+    background-color: var(--rcBlue);
+    margin: 0;
+    padding: 10px;
+    color: var(--rcOffWhite)
+}
+
+/* header to display my name */
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/* different text color class to give it nice style for my initials */
+.diffTextColor {
+    color: var(--rcDandy);
+}
+
+/* div to wrap the menu element so I can float it to the right for style */
+.header menu {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+}
+
+/* getting rid of any unnecessary marks when listing the items */
+.header ul {
+    list-style-type: none;
+}
+
+/* giving it a bit of padding to separate the words out */
+.header li {
+    display: inline-block;
+    padding: 5px;
+}
+
+/* getting rid of decoration so it doesn't override clean look when clicking on link */
+.header a {
+    color: var(--rcOffWhite);
+    text-decoration: none;
+}
+
+/* nice hover pseudo class to give a simple selection effect when hovering over a list item in menu */
+.header a:hover {
+    background-color: var(--rcBlueLight);
+}
+
+.banner {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* nav ul {
+    overflow: hidden;
+    align-items: center;
+}
+
+nav li {
+    float: right;
+}
+
+nav li a {
+    display: flex;
+    padding: 40px 16px;
+}
+
+ */
+
+/* .portfolioContainer {
+    width:3000px;
+    height:190px;
+    background-color:blue;
+    padding-top:20px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+#titleFloat {
+    float: left;
+    border: 3px solid black;
+    width: 100px;
+    height: auto;
+}
+
+.portfolio {
+    float: right;
+    width:1000px;
+    height:190px;
+    background-color:green;
+    padding-top:20px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+#portfolioImg1 {
+    float:left;
+    width:180px;
+    height:160px;
+    background-color:white;
+    border:solid black;
+}
+
+#portfolioImg2 {
+    float:left;
+    width:180px;
+    height:160px;
+    background-color:white;
+    border:solid black;
+}
+
+#portfolioImg3 {
+    float:left;
+    width:180px;
+    height:160px;
+    background-color:white;
+    border:solid black;
+}
+
+#portfolioImg4 {
+    float:left;
+    width:180px;
+    height:160px;
+    background-color:white;
+    border:solid black;
+} */
