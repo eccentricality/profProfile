@@ -89,16 +89,22 @@ body {
 }
 
 .mainPageTitle {
-    flex-direction: row;
+    flex-basis: 15%;
     height: 50px;
-    padding-right: 50px;
     font-size: 25px;
 }
 
+.mainPageTitle h1 {
+    padding-right: 100px;
+}
+
 .mainPageContent {
-    flex-direction: row;
+    flex-basis: 85%;
     border-left: 3px solid var(--rcSalmon);
-    justify-content: right;
+}
+
+.mainPageContent li {
+    display: inline;
 }
 
 /* nav ul {
