@@ -65,11 +65,40 @@ body {
 }
 
 .banner {
-    height: 400px;
+    height: 200px;
     width: 100%;
     margin-bottom: 25px;
     background-size: cover;
     background-position: center;
+    background-color: var(--rcDandy);
+}
+
+.mainPageParent {
+    display: flex;
+}
+
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.titleContentParent {
+    display: flex;
+}
+
+.mainPageTitle {
+    flex-direction: row;
+    height: 50px;
+    padding-right: 50px;
+    font-size: 25px;
+}
+
+.mainPageContent {
+    flex-direction: row;
+    border-left: 3px solid var(--rcSalmon);
+    justify-content: right;
 }
 
 /* nav ul {
