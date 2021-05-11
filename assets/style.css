@@ -5,6 +5,7 @@
     --rcOffWhite: #ECECEC;
     --rcBlue: #5DA2D5;
     --rcBlueLight: #90CCF4;
+    --rcGray: #5D5C61;
 }
 
 /* applying general style choice to body container to apply across the body as baseline since this specificity is one of the most general and can easily be overwritten by other more specific designations */
@@ -13,6 +14,12 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     font-family: 'Rubik', sans-serif; /* from google fonts */
+    background-color: var(--rcBlue);
+    color: var(--rcDandy);
+}
+
+p {
+    color: var(--rcOffWhite);
 }
 
 /* creating a nice border for the header, giving it a bit of padding so text isn't too close to the edges */
@@ -54,29 +61,37 @@ body {
 }
 
 /* getting rid of decoration so it doesn't override clean look when clicking on link */
-.header a {
+a {
     color: var(--rcOffWhite);
     text-decoration: none;
 }
 
-/* nice hover pseudo class to give a simple selection effect when hovering over a list item in menu */
-.header a:hover {
+/* nice hover pseudo class to give a simple selection effect when hovering over links */
+a:hover {
     background-color: var(--rcBlueLight);
 }
 
+/* creates a banner area for the banner image to fill */
 .banner {
     height: 200px;
     width: 100%;
     margin-bottom: 25px;
     background-size: cover;
     background-position: center;
-    background-color: var(--rcDandy);
 }
 
+/* adjust banner image so it fills the entire banner container but no more */
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+/* give flex to immediate children */
 .mainPageParent {
     display: flex;
 }
 
+/* container for the major content including about me, portfolio and contact */
 .mainPage {
     display: flex;
     flex-direction: column;
@@ -85,44 +100,86 @@ body {
     gap: 60px;
 }
 
-.titleContentParent {
+/* 3 separate content containers to separate out and design with a flow */
+.mainContent {
     display: flex;
     height: 400px;
+    background-color: var(--rcBlue);
+    padding: 10px;
 }
 
+/* container to help style and adjust to my liking */
 #aboutMeContentParent {
     height: 100px;
 }
 
+/* Helps readjust container for portfolio if more images are added by adjusting height automatically */
 #portfolioContentParent {
-    height: 500px;
+    height: auto;
 }
 
+/* id to adjust just first project's image to be bigger than the rest */
+#portfolioImg1 {
+    height: 200px;
+    width: auto;
+}
+
+/* easier to read the text */
+#portfolioImages p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* sets up properties to be manipulated for hover and highlight effect with fade in and out */
+#portfolioImages img {
+    opacity: 0.5;
+    transition: opacity .2s ease-in-out;
+    border: solid 3px transparent;
+}
+
+/* couples with above to produce fade in/out and highlight affect */
+#portfolioImages img:hover {
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+    border: solid 3px var(--rcDandy);
+}
+
+/* container for minor adjustment purposes */
 #contactContentParent {
     height: 60px;
 }
 
+/* variety of adjustments to fit style preferences */
 .mainPageTitle {
+    background-color: var(--rcSalmon);
     flex-basis: 15%;
     height: 50px;
     font-size: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
+/* setting color for title on each section */
 .mainPageTitle h1 {
     padding-right: 100px;
+    color: var(--rcOffWhite);
 }
 
+/* create a nice stylish single border for separating title and content */
 .mainPageContent {
     flex-basis: 85%;
     padding-left: 30px;
     border-left: 3px solid var(--rcSalmon);
+    padding-top: 15px;
 }
 
+/* container to make slight adjustments for style purposes */
 .mainPageContent ul {
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
+/* container to make slight adjustments for style purposes */
 .mainPageContent li {
     display: inline;
-    margin: 100px;
+    margin: 70px;
 }
